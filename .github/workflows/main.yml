@@ -36,4 +36,4 @@ jobs:
       with:
         name: SpaceShooterGame
         path: 
-          ./bin/publish/
+          E:\2022-2023\DevOps\SpaceShooterGame\SpaceShooterGame\bin\publish
