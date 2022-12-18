@@ -36,4 +36,4 @@ jobs:
       with:
         name: SpaceShooterGame
         path: 
-          E:\2022-2023\DevOps\SpaceShooterGame\SpaceShooterGame\bin\publish
+          D:\a\SpaceShooterGame\SpaceShooterGame\SpaceShooterGame\bin\Release\net7.0-windows\publish\
