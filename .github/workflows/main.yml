@@ -30,8 +30,17 @@ jobs:
     - name: Publish
       run: dotnet publish ./SpaceShooterGame.sln --configuration Release --no-build #/p:PublishSingleFile=true
       
+    - name: Create download folder
+      run: mkdir downloads
+      
+    - name: Add files
+      run: 
+        cd downloads
+        
+      
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: SpaceShooterGame
-        path: D:\a\SPG-WPF\SPG-WPF\bin\Release\net5.0-windows\win-x64\publish\
+        path: 
+          E:\2022-2023\DevOps\SpaceShooterGame\SpaceShooterGame\bin\Release\net7.0-windows\publish
