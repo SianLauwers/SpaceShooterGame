@@ -15,7 +15,7 @@
                Foreground="White" Canvas.Left="0" Canvas.Top="0"/>
 
         <ListView Name="ItemList" FontSize="7" FontWeight="Bold" Margin="87,-25,0,0"
-               Foreground="Black"  Canvas.Left="0" Canvas.Top="25" Height="50" Width="350" SelectedIndex="0" >
+               Foreground="Black"  Canvas.Left="0" Canvas.Top="25" Height="0" Width="0" SelectedIndex="0" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Id" Width="100" DisplayMemberBinding="{Binding Id}"/>
@@ -23,6 +23,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Label Name="highScoreText" Content="High Score: 0" FontSize="18" FontWeight="Bold"
+               Foreground="White" Canvas.Left="0" Canvas.Top="25"/>
         <Label Name="damageText" Content="Damage: 0" FontSize="18" FontWeight="Bold"
                Foreground="White" Canvas.Right="0" Canvas.Top="0"/>
 

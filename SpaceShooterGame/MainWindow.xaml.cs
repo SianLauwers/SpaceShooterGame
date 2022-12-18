@@ -53,7 +53,7 @@ namespace SpaceShooterGame
         int enemyCounter = 100;
         int playerSpeed = 15;
         int limit = 50;
-        int score = 30;
+        int score = 0;
         int damage = 0;
         int enemySpeed = 10;
         //int highScore = 0;
@@ -330,7 +330,7 @@ namespace SpaceShooterGame
                 //{
 
                 //}
-                MessageBox.Show("Captain, you have killed " + score + " enemy ships." + Environment.NewLine + "Your Highest score is: " + Read() + Environment.NewLine + "Press OK to Try Again.", "Game Over") ;
+                MessageBox.Show("Captain, you have killed " + score + " enemy ships." + Environment.NewLine +/* "Your Highest score is: " + Read() +*/ Environment.NewLine + "Press OK to close the game.", "Game Over") ;
                 ///System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
                 Application.Current.Shutdown();
             }
