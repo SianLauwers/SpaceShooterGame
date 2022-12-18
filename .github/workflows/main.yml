@@ -1,0 +1,37 @@
+name: .NET
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    
+    runs-on: windows-2019
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.0.x'
+        
+    - name: Restore dependencies
+      run: dotnet restore ./SpaceShooterGame.sln
+      
+    - name: Build
+      run: dotnet build ./SpaceShooterGame.sln --configuration Release --no-restore
+      
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+      
+    - name: Publish
+      run: dotnet publish ./SpaceShooterGame.sln --configuration Release --no-build #/p:PublishSingleFile=true
+      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: SpaceShooterGame
+        path: D:\a\SPG-WPF\SPG-WPF\bin\Release\net5.0-windows\win-x64\publish\
